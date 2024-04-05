@@ -48,7 +48,10 @@ echo "保存PM2进程列表..."
 pm2 save
 
 
-
 #启动
-
 pm2 start ./clash-linux-amd64-v1.18.0 --name="clash-service" -- -f glados.yaml
+
+#环境变量
+export http_proxy="http://127.0.0.1:7890"
+export https_proxy="https://127.0.0.1:7890"
+
